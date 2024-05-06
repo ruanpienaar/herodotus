@@ -1,6 +1,6 @@
 digraph "application tree" {
-  "herodutus"
-  "herodutus" -> "bandit"
+  "herodotus"
+  "herodotus" -> "bandit"
   "bandit" -> "elixir"
   "bandit" -> "hpax"
   "hpax" -> "elixir"
@@ -30,10 +30,10 @@ digraph "application tree" {
   "thousand_island" -> "telemetry"
   "bandit" -> "websock"
   "websock" -> "elixir"
-  "herodutus" -> "dns_cluster"
+  "herodotus" -> "dns_cluster"
   "dns_cluster" -> "elixir"
   "dns_cluster" -> "logger"
-  "herodutus" -> "ecto_sql"
+  "herodotus" -> "ecto_sql"
   "ecto_sql" -> "db_connection"
   "db_connection" -> "elixir"
   "db_connection" -> "logger"
@@ -64,8 +64,8 @@ digraph "application tree" {
   "postgrex" -> "table" [label="(optional - missing)"]
   "ecto_sql" -> "tds" [label="(optional - missing)"]
   "ecto_sql" -> "telemetry"
-  "herodutus" -> "elixir"
-  "herodutus" -> "esbuild"
+  "herodotus" -> "elixir"
+  "herodotus" -> "esbuild"
   "esbuild" -> "castore"
   "castore" -> "elixir"
   "castore" -> "logger"
@@ -74,7 +74,7 @@ digraph "application tree" {
   "esbuild" -> "jason"
   "esbuild" -> "logger"
   "esbuild" -> "ssl" [label="(optional)"]
-  "herodutus" -> "finch"
+  "herodotus" -> "finch"
   "finch" -> "castore"
   "finch" -> "elixir"
   "finch" -> "logger"
@@ -91,14 +91,14 @@ digraph "application tree" {
   "nimble_pool" -> "elixir"
   "nimble_pool" -> "logger"
   "finch" -> "telemetry"
-  "herodutus" -> "gettext"
+  "herodotus" -> "gettext"
   "gettext" -> "elixir"
   "gettext" -> "expo"
   "expo" -> "elixir"
   "gettext" -> "logger"
-  "herodutus" -> "jason"
-  "herodutus" -> "logger"
-  "herodutus" -> "phoenix"
+  "herodotus" -> "jason"
+  "herodotus" -> "logger"
+  "herodotus" -> "phoenix"
   "phoenix" -> "castore"
   "phoenix" -> "crypto"
   "phoenix" -> "eex"
@@ -128,14 +128,14 @@ digraph "application tree" {
   "websock_adapter" -> "plug"
   "websock_adapter" -> "plug_cowboy" [label="(optional - missing)"]
   "websock_adapter" -> "websock"
-  "herodutus" -> "phoenix_ecto"
+  "herodotus" -> "phoenix_ecto"
   "phoenix_ecto" -> "ecto"
   "phoenix_ecto" -> "elixir"
   "phoenix_ecto" -> "logger"
   "phoenix_ecto" -> "phoenix_html" [label="(optional)"]
   "phoenix_ecto" -> "plug"
-  "herodutus" -> "phoenix_html"
-  "herodutus" -> "phoenix_live_dashboard"
+  "herodotus" -> "phoenix_html"
+  "herodotus" -> "phoenix_live_dashboard"
   "phoenix_live_dashboard" -> "ecto" [label="(optional)"]
   "phoenix_live_dashboard" -> "ecto_mysql_extras" [label="(optional - missing)"]
   "phoenix_live_dashboard" -> "ecto_psql_extras" [label="(optional - missing)"]
@@ -158,17 +158,17 @@ digraph "application tree" {
   "telemetry_metrics" -> "elixir"
   "telemetry_metrics" -> "logger"
   "telemetry_metrics" -> "telemetry"
-  "herodutus" -> "phoenix_live_reload"
+  "herodotus" -> "phoenix_live_reload"
   "phoenix_live_reload" -> "elixir"
   "phoenix_live_reload" -> "file_system"
   "file_system" -> "elixir"
   "file_system" -> "logger"
   "phoenix_live_reload" -> "logger"
   "phoenix_live_reload" -> "phoenix"
-  "herodutus" -> "phoenix_live_view"
-  "herodutus" -> "postgrex"
-  "herodutus" -> "runtime_tools"
-  "herodutus" -> "swoosh"
+  "herodotus" -> "phoenix_live_view"
+  "herodotus" -> "postgrex"
+  "herodotus" -> "runtime_tools"
+  "herodotus" -> "swoosh"
   "swoosh" -> "bandit" [label="(optional)"]
   "swoosh" -> "cowboy" [label="(optional - missing)"]
   "swoosh" -> "elixir"
@@ -187,13 +187,13 @@ digraph "application tree" {
   "swoosh" -> "req" [label="(optional - missing)"]
   "swoosh" -> "telemetry"
   "swoosh" -> "xmerl"
-  "herodutus" -> "tailwind"
+  "herodotus" -> "tailwind"
   "tailwind" -> "castore"
   "tailwind" -> "elixir"
   "tailwind" -> "inets" [label="(optional)"]
   "tailwind" -> "logger"
   "tailwind" -> "ssl" [label="(optional)"]
-  "herodutus" -> "telemetry_metrics"
-  "herodutus" -> "telemetry_poller"
+  "herodotus" -> "telemetry_metrics"
+  "herodotus" -> "telemetry_poller"
   "telemetry_poller" -> "telemetry"
 }

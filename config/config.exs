@@ -7,19 +7,19 @@
 # General application configuration
 import Config
 
-config :herodutus,
-  ecto_repos: [Herodutus.Repo],
+config :herodotus,
+  ecto_repos: [Herodotus.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :herodutus, HerodutusWeb.Endpoint,
+config :herodotus, HerodotusWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
-    formats: [html: HerodutusWeb.ErrorHTML, json: HerodutusWeb.ErrorJSON],
+    formats: [html: HerodotusWeb.ErrorHTML, json: HerodotusWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Herodutus.PubSub,
+  pubsub_server: Herodotus.PubSub,
   live_view: [signing_salt: "YJVPmswy"]
 
 # Configures the mailer
@@ -29,12 +29,12 @@ config :herodutus, HerodutusWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :herodutus, Herodutus.Mailer, adapter: Swoosh.Adapters.Local
+config :herodotus, Herodotus.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
-  herodutus: [
+  herodotus: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
@@ -44,7 +44,7 @@ config :esbuild,
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "3.4.0",
-  herodutus: [
+  herodotus: [
     args: ~w(
       --config=tailwind.config.js
       --input=css/app.css

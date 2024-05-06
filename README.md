@@ -1,4 +1,4 @@
-# Herodutus
+# Herodotus
 
 To start your Phoenix server:
 

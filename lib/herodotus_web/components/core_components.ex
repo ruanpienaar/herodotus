@@ -1,4 +1,4 @@
-defmodule HerodutusWeb.CoreComponents do
+defmodule HerodotusWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -17,7 +17,7 @@ defmodule HerodutusWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import HerodutusWeb.Gettext
+  import HerodotusWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -660,9 +660,9 @@ defmodule HerodutusWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(HerodutusWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(HerodotusWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(HerodutusWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(HerodotusWeb.Gettext, "errors", msg, opts)
     end
   end
 

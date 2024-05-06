@@ -1,4 +1,4 @@
-defmodule Herodutus.Application do
+defmodule Herodotus.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,21 +8,21 @@ defmodule Herodutus.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      HerodutusWeb.Telemetry,
-      Herodutus.Repo,
-      {DNSCluster, query: Application.get_env(:herodutus, :dns_cluster_query) || :ignore},
-      {Phoenix.PubSub, name: Herodutus.PubSub},
+      HerodotusWeb.Telemetry,
+      Herodotus.Repo,
+      {DNSCluster, query: Application.get_env(:herodotus, :dns_cluster_query) || :ignore},
+      {Phoenix.PubSub, name: Herodotus.PubSub},
       # Start the Finch HTTP client for sending emails
-      {Finch, name: Herodutus.Finch},
-      # Start a worker by calling: Herodutus.Worker.start_link(arg)
-      # {Herodutus.Worker, arg},
+      {Finch, name: Herodotus.Finch},
+      # Start a worker by calling: Herodotus.Worker.start_link(arg)
+      # {Herodotus.Worker, arg},
       # Start to serve requests, typically the last entry
-      HerodutusWeb.Endpoint
+      HerodotusWeb.Endpoint
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Herodutus.Supervisor]
+    opts = [strategy: :one_for_one, name: Herodotus.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -30,7 +30,7 @@ defmodule Herodutus.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    HerodutusWeb.Endpoint.config_change(changed, removed)
+    HerodotusWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

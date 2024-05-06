@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :herodutus, Herodutus.Repo,
+config :herodotus, Herodotus.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "herodutus_dev",
+  database: "herodotus_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :herodutus, Herodutus.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :herodutus, HerodutusWeb.Endpoint,
+config :herodotus, HerodotusWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -25,8 +25,8 @@ config :herodutus, HerodutusWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "vXzhKZYFNGx3PwyYhgJiZGOK364L1SW4vcbKFb1vnwKL6mI4wqwrLsdTEydHAS72",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:herodutus, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:herodutus, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:herodotus, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:herodotus, ~w(--watch)]}
   ]
 
 # ## SSL Support
@@ -53,17 +53,17 @@ config :herodutus, HerodutusWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :herodutus, HerodutusWeb.Endpoint,
+config :herodotus, HerodotusWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/herodutus_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/herodotus_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :herodutus, dev_routes: true
+config :herodotus, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

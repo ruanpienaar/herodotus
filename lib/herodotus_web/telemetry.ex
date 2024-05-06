@@ -1,4 +1,4 @@
-defmodule HerodutusWeb.Telemetry do
+defmodule HerodotusWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -52,23 +52,23 @@ defmodule HerodutusWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("herodutus.repo.query.total_time",
+      summary("herodotus.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("herodutus.repo.query.decode_time",
+      summary("herodotus.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("herodutus.repo.query.query_time",
+      summary("herodotus.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("herodutus.repo.query.queue_time",
+      summary("herodotus.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("herodutus.repo.query.idle_time",
+      summary("herodotus.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
@@ -86,7 +86,7 @@ defmodule HerodutusWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {HerodutusWeb, :count_users, []}
+      # {HerodotusWeb, :count_users, []}
     ]
   end
 end

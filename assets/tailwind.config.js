@@ -8,8 +8,8 @@ const path = require("path")
 module.exports = {
   content: [
     "./js/**/*.js",
-    "../lib/herodutus_web.ex",
-    "../lib/herodutus_web/**/*.*ex"
+    "../lib/herodotus_web.ex",
+    "../lib/herodotus_web/**/*.*ex"
   ],
   theme: {
     extend: {

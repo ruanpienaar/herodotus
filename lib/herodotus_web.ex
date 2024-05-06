@@ -1,12 +1,12 @@
-defmodule HerodutusWeb do
+defmodule HerodotusWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use HerodutusWeb, :controller
-      use HerodutusWeb, :html
+      use HerodotusWeb, :controller
+      use HerodotusWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule HerodutusWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: HerodutusWeb.Layouts]
+        layouts: [html: HerodotusWeb.Layouts]
 
       import Plug.Conn
-      import HerodutusWeb.Gettext
+      import HerodotusWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule HerodutusWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {HerodutusWeb.Layouts, :app}
+        layout: {HerodotusWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule HerodutusWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import HerodutusWeb.CoreComponents
-      import HerodutusWeb.Gettext
+      import HerodotusWeb.CoreComponents
+      import HerodotusWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule HerodutusWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: HerodutusWeb.Endpoint,
-        router: HerodutusWeb.Router,
-        statics: HerodutusWeb.static_paths()
+        endpoint: HerodotusWeb.Endpoint,
+        router: HerodotusWeb.Router,
+        statics: HerodotusWeb.static_paths()
     end
   end
 

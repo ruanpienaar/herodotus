@@ -1,9 +1,9 @@
-defmodule Herodutus.MixProject do
+defmodule Herodotus.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :herodutus,
+      app: :herodotus,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,8 +18,8 @@ defmodule Herodutus.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Herodutus.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      mod: {Herodotus.Application, []},
+      extra_applications: [:logger, :runtime_tools, :observer, :wx]
     ]
   end
 
@@ -74,10 +74,10 @@ defmodule Herodutus.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind herodutus", "esbuild herodutus"],
+      "assets.build": ["tailwind herodotus", "esbuild herodotus"],
       "assets.deploy": [
-        "tailwind herodutus --minify",
-        "esbuild herodutus --minify",
+        "tailwind herodotus --minify",
+        "esbuild herodotus --minify",
         "phx.digest"
       ]
     ]

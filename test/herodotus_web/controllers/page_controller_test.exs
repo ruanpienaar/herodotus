@@ -1,5 +1,5 @@
-defmodule HerodutusWeb.PageControllerTest do
-  use HerodutusWeb.ConnCase
+defmodule HerodotusWeb.PageControllerTest do
+  use HerodotusWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")
