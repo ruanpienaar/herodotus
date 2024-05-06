@@ -1,0 +1,199 @@
+digraph "application tree" {
+  "herodutus"
+  "herodutus" -> "bandit"
+  "bandit" -> "elixir"
+  "bandit" -> "hpax"
+  "hpax" -> "elixir"
+  "bandit" -> "logger"
+  "logger" -> "elixir"
+  "bandit" -> "plug"
+  "plug" -> "eex"
+  "eex" -> "elixir"
+  "plug" -> "elixir"
+  "plug" -> "logger"
+  "plug" -> "mime"
+  "mime" -> "elixir"
+  "mime" -> "logger"
+  "plug" -> "plug_crypto"
+  "plug_crypto" -> "crypto"
+  "plug_crypto" -> "elixir"
+  "plug" -> "telemetry"
+  "bandit" -> "telemetry"
+  "bandit" -> "thousand_island"
+  "thousand_island" -> "elixir"
+  "thousand_island" -> "logger"
+  "thousand_island" -> "ssl"
+  "ssl" -> "crypto"
+  "ssl" -> "public_key"
+  "public_key" -> "asn1"
+  "public_key" -> "crypto"
+  "thousand_island" -> "telemetry"
+  "bandit" -> "websock"
+  "websock" -> "elixir"
+  "herodutus" -> "dns_cluster"
+  "dns_cluster" -> "elixir"
+  "dns_cluster" -> "logger"
+  "herodutus" -> "ecto_sql"
+  "ecto_sql" -> "db_connection"
+  "db_connection" -> "elixir"
+  "db_connection" -> "logger"
+  "db_connection" -> "telemetry"
+  "ecto_sql" -> "ecto"
+  "ecto" -> "crypto"
+  "ecto" -> "decimal"
+  "decimal" -> "elixir"
+  "ecto" -> "eex"
+  "ecto" -> "elixir"
+  "ecto" -> "jason" [label="(optional)"]
+  "jason" -> "decimal" [label="(optional)"]
+  "jason" -> "elixir"
+  "ecto" -> "logger"
+  "ecto" -> "telemetry"
+  "ecto_sql" -> "eex"
+  "ecto_sql" -> "elixir"
+  "ecto_sql" -> "logger"
+  "ecto_sql" -> "myxql" [label="(optional - missing)"]
+  "ecto_sql" -> "postgrex" [label="(optional)"]
+  "postgrex" -> "crypto"
+  "postgrex" -> "db_connection"
+  "postgrex" -> "decimal"
+  "postgrex" -> "elixir"
+  "postgrex" -> "jason" [label="(optional)"]
+  "postgrex" -> "logger"
+  "postgrex" -> "ssl"
+  "postgrex" -> "table" [label="(optional - missing)"]
+  "ecto_sql" -> "tds" [label="(optional - missing)"]
+  "ecto_sql" -> "telemetry"
+  "herodutus" -> "elixir"
+  "herodutus" -> "esbuild"
+  "esbuild" -> "castore"
+  "castore" -> "elixir"
+  "castore" -> "logger"
+  "esbuild" -> "elixir"
+  "esbuild" -> "inets" [label="(optional)"]
+  "esbuild" -> "jason"
+  "esbuild" -> "logger"
+  "esbuild" -> "ssl" [label="(optional)"]
+  "herodutus" -> "finch"
+  "finch" -> "castore"
+  "finch" -> "elixir"
+  "finch" -> "logger"
+  "finch" -> "mime"
+  "finch" -> "mint"
+  "mint" -> "castore" [label="(optional)"]
+  "mint" -> "elixir"
+  "mint" -> "hpax"
+  "mint" -> "logger"
+  "mint" -> "ssl"
+  "finch" -> "nimble_options"
+  "nimble_options" -> "elixir"
+  "finch" -> "nimble_pool"
+  "nimble_pool" -> "elixir"
+  "nimble_pool" -> "logger"
+  "finch" -> "telemetry"
+  "herodutus" -> "gettext"
+  "gettext" -> "elixir"
+  "gettext" -> "expo"
+  "expo" -> "elixir"
+  "gettext" -> "logger"
+  "herodutus" -> "jason"
+  "herodutus" -> "logger"
+  "herodutus" -> "phoenix"
+  "phoenix" -> "castore"
+  "phoenix" -> "crypto"
+  "phoenix" -> "eex"
+  "phoenix" -> "elixir"
+  "phoenix" -> "jason" [label="(optional)"]
+  "phoenix" -> "logger"
+  "phoenix" -> "phoenix_pubsub"
+  "phoenix_pubsub" -> "crypto"
+  "phoenix_pubsub" -> "elixir"
+  "phoenix_pubsub" -> "logger"
+  "phoenix" -> "phoenix_template"
+  "phoenix_template" -> "eex"
+  "phoenix_template" -> "elixir"
+  "phoenix_template" -> "phoenix_html" [label="(optional)"]
+  "phoenix_html" -> "eex"
+  "phoenix_html" -> "elixir"
+  "phoenix_html" -> "logger"
+  "phoenix" -> "phoenix_view" [label="(optional - missing)"]
+  "phoenix" -> "plug"
+  "phoenix" -> "plug_cowboy" [label="(optional - missing)"]
+  "phoenix" -> "plug_crypto"
+  "phoenix" -> "public_key"
+  "phoenix" -> "telemetry"
+  "phoenix" -> "websock_adapter"
+  "websock_adapter" -> "bandit" [label="(optional)"]
+  "websock_adapter" -> "elixir"
+  "websock_adapter" -> "plug"
+  "websock_adapter" -> "plug_cowboy" [label="(optional - missing)"]
+  "websock_adapter" -> "websock"
+  "herodutus" -> "phoenix_ecto"
+  "phoenix_ecto" -> "ecto"
+  "phoenix_ecto" -> "elixir"
+  "phoenix_ecto" -> "logger"
+  "phoenix_ecto" -> "phoenix_html" [label="(optional)"]
+  "phoenix_ecto" -> "plug"
+  "herodutus" -> "phoenix_html"
+  "herodutus" -> "phoenix_live_dashboard"
+  "phoenix_live_dashboard" -> "ecto" [label="(optional)"]
+  "phoenix_live_dashboard" -> "ecto_mysql_extras" [label="(optional - missing)"]
+  "phoenix_live_dashboard" -> "ecto_psql_extras" [label="(optional - missing)"]
+  "phoenix_live_dashboard" -> "ecto_sqlite3_extras" [label="(optional - missing)"]
+  "phoenix_live_dashboard" -> "elixir"
+  "phoenix_live_dashboard" -> "logger"
+  "phoenix_live_dashboard" -> "mime"
+  "phoenix_live_dashboard" -> "phoenix_live_view"
+  "phoenix_live_view" -> "elixir"
+  "phoenix_live_view" -> "floki" [label="(optional - missing)"]
+  "phoenix_live_view" -> "jason" [label="(optional)"]
+  "phoenix_live_view" -> "logger"
+  "phoenix_live_view" -> "phoenix"
+  "phoenix_live_view" -> "phoenix_html"
+  "phoenix_live_view" -> "phoenix_template"
+  "phoenix_live_view" -> "phoenix_view" [label="(optional - missing)"]
+  "phoenix_live_view" -> "plug"
+  "phoenix_live_view" -> "telemetry"
+  "phoenix_live_dashboard" -> "telemetry_metrics"
+  "telemetry_metrics" -> "elixir"
+  "telemetry_metrics" -> "logger"
+  "telemetry_metrics" -> "telemetry"
+  "herodutus" -> "phoenix_live_reload"
+  "phoenix_live_reload" -> "elixir"
+  "phoenix_live_reload" -> "file_system"
+  "file_system" -> "elixir"
+  "file_system" -> "logger"
+  "phoenix_live_reload" -> "logger"
+  "phoenix_live_reload" -> "phoenix"
+  "herodutus" -> "phoenix_live_view"
+  "herodutus" -> "postgrex"
+  "herodutus" -> "runtime_tools"
+  "herodutus" -> "swoosh"
+  "swoosh" -> "bandit" [label="(optional)"]
+  "swoosh" -> "cowboy" [label="(optional - missing)"]
+  "swoosh" -> "elixir"
+  "swoosh" -> "ex_aws" [label="(optional - missing)"]
+  "swoosh" -> "finch" [label="(optional)"]
+  "swoosh" -> "gen_smtp" [label="(optional - missing)"]
+  "swoosh" -> "hackney" [label="(optional - missing)"]
+  "swoosh" -> "jason"
+  "swoosh" -> "logger"
+  "swoosh" -> "mail" [label="(optional - missing)"]
+  "swoosh" -> "mime"
+  "swoosh" -> "mua" [label="(optional - missing)"]
+  "swoosh" -> "multipart" [label="(optional - missing)"]
+  "swoosh" -> "plug" [label="(optional)"]
+  "swoosh" -> "plug_cowboy" [label="(optional - missing)"]
+  "swoosh" -> "req" [label="(optional - missing)"]
+  "swoosh" -> "telemetry"
+  "swoosh" -> "xmerl"
+  "herodutus" -> "tailwind"
+  "tailwind" -> "castore"
+  "tailwind" -> "elixir"
+  "tailwind" -> "inets" [label="(optional)"]
+  "tailwind" -> "logger"
+  "tailwind" -> "ssl" [label="(optional)"]
+  "herodutus" -> "telemetry_metrics"
+  "herodutus" -> "telemetry_poller"
+  "telemetry_poller" -> "telemetry"
+}

@@ -1,0 +1,41 @@
+Figure out how ecto dep is using 3.11.2
+
+
+├── phoenix_ecto ~> 4.4 (Hex package)
+│   ├── ecto ~> 3.5 (Hex package)
+│   ├── phoenix_html ~> 2.14.2 or ~> 3.0 or ~> 4.1 (Hex package)
+│   └── plug ~> 1.9 (Hex package)
+
+mix.exs
+{:phoenix_ecto, "~> 4.4"},
+
+
+
+├── ecto_sql ~> 3.10 (Hex package)
+│   ├── db_connection ~> 2.4.1 or ~> 2.5 (Hex package)
+│   │   └── telemetry ~> 0.4 or ~> 1.0 (Hex package)
+│   ├── ecto ~> 3.11.0 (Hex package)
+│   │   ├── decimal ~> 2.0 (Hex package)
+│   │   ├── jason ~> 1.0 (Hex package)
+│   │   └── telemetry ~> 0.4 or ~> 1.0 (Hex package)
+│   ├── postgrex ~> 0.16.0 or ~> 0.17.0 or ~> 1.0 (Hex package)
+│   └── telemetry ~> 0.4.0 or ~> 1.0 (Hex package)
+
+mix.exs
+{:ecto_sql, "~> 3.10"},
+
+
+
+├── phoenix_live_dashboard ~> 0.8.3 (Hex package)
+│   ├── ecto ~> 3.6.2 or ~> 3.7 (Hex package)
+│   ├── mime ~> 1.6 or ~> 2.0 (Hex package)
+│   ├── phoenix_live_view ~> 0.19 or ~> 1.0 (Hex package)
+│   └── telemetry_metrics ~> 0.6 or ~> 1.0 (Hex package)
+
+mix.exs
+{:phoenix_live_dashboard, "~> 0.8.3"},
+
+
+
+How is it that ecto 3.11.2 won ? Is ecto backwards compatible?
+is 3.11.2 defined somewhere?
